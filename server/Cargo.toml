@@ -1,0 +1,22 @@
+[package]
+name = "local-llm-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7.5", features = ["multipart"] }
+futures = "0.3.30"
+io-streams = { version = "0.16.1", features = ["tokio"] }
+log = "0.4.22"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.120"
+tokio = { version = "1.38.0", features = ["macros", "rt-multi-thread", "fs", "process", "io-std", "io-util", "full"] }
+tokio-util = { version = "0.7.11", features = ["io", "io-util", "codec"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+mistralrs = { git = "https://github.com/EricLBuehler/mistral.rs.git", features = ["cuda"]}
+anyhow = "1.0.86"
+either = "1.13.0"
+indexmap = "2.2.6"
+clap = { version = "4.5.11", features = ["derive"] }
+
